@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.titulo {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', Geneva, Verdana, sans-serif;
+}
+.post {
+  width: 600px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  border: 2px solid black;
+  margin-top: 10px;
+}
+img {
+  width: 200px;
+  height: 200px;
+}
+.box-text {
+  width: 400px;
+  height: 200px;
+  border-left: 2px solid black;
+}
+.post .box-titulo {
+  padding: 5px 0 5px 20px;
+  width: auto;
+  font-family: sans-serif;
+}
+.post .box-descricao {
+  padding: 5px 0 5px 20px;
+  width: auto;
+  font-family: sans-serif;
+}
+.post .box-autor {
+  padding: 5px 0 5px 20px;
+  width: auto;
+  font-family: initial;
+}

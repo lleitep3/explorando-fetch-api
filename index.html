@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <title>Api</title>
+</head>
+
+<body>
+  <h1 class="titulo">Post Blog</h1>
+
+  <form class="formPost">
+    <div>
+      <label>Title</label>
+      <input class="title" value="Estupefaço" />
+    </div>
+    <div>
+      <label>Description</label>
+      <input class="description"
+        value='O feitiço "estupefaço" é denominado de Estuporante e consiste em deixar uma pessoa inconsciente com um faixo vermelho de luz.' />
+    </div>
+    <div>
+      <label>Author</label>
+      <input class="author" value="Hermione Granger" />
+    </div>
+
+    <button class="enviarForm">Enviar</button>
+
+  </form>
+
+  <section class="posts">
+
+  </section>
+
+  <script src="script.js"></script>
+  <script>
+    async function loadPosts() {
+      const posts = await postsAPI.getAll()
+      const htmlPosts = posts.map(createPostItem).join('')
+      document.querySelector('.posts').innerHTML = htmlPosts
+    }
+
+    function saveNewPost(event) {
+      const newPost = {
+        title: document.querySelector('.title').value,
+        description: document.querySelector('.description').value,
+        author: document.querySelector('.author').value
+      }
+
+      postsAPI.save(newPost)
+    }
+
+    async function initialize() {
+      loadPosts()
+
+      const form = document.querySelector('.enviarForm')
+
+      form.addEventListener('click', saveNewPost)
+    }
+
+    initialize()
+  </script>
+</body>
+
+</html>

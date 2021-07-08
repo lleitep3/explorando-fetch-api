@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Expectro Patronum",
+      "description": "Lorem ipsum, dolor sit  Aspernatur, necessitatibus voluptatum maxime ducimus placeat!",
+      "author": "Harry Potter"
+    },
+    {
+      "id": 2,
+      "title": "Expelliarmus",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur, necessitatibus voluptatum maxime ducimus placeat!",
+      "author": "Lorde Voldemort"
+    },
+    {
+      "title": "Estupefaço",
+      "description": "O feitiço \"estupefaço\" é denominado de Estuporante e consiste em deixar uma pessoa inconsciente com um faixo vermelho de luz.",
+      "author": "Hermione Granger",
+      "id": 4
+    }
+  ]
+}
